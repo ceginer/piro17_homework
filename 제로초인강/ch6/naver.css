@@ -11,6 +11,19 @@ body {
   padding: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -239,7 +252,6 @@ main {
 
 #main-login {
   float: left;
-  /* display: inline-block; */
   width: 332px;
   height: 120px;
   vertical-align: top;
@@ -247,14 +259,14 @@ main {
   margin-bottom: 8px;
 }
 
-/* #main-second-block .inline-block:first-child {
+#main-second-block .inline-block:first-child {
   width: 740px;
 }
 
 #main-second-block .inline-block:last-child {
   width: 332px;
   vertical-align: top;
-} */
+}
 
 #main-ytn {
   display: inline-block;
@@ -265,10 +277,12 @@ main {
   margin-bottom: 8px;
 }
 
-/* #main-ytn h3,
+#main-ytn h3,
 #main-ytn ol {
+  /* #main-ytn h3, ol 하면 전체 ol 이 되므로
+   #main-ytn h3, #main-ytn ol 이렇게 적기*/
   display: inline-block;
-} */
+}
 
 #main-newsstand {
   display: inline-block;
@@ -279,7 +293,7 @@ main {
   margin-bottom: 8px;
 }
 
-/* #main-newsstand h3 {
+#main-newsstand h3 {
   height: 45px;
   border-bottom: 1px solid #ebeef3;
 }
@@ -303,7 +317,13 @@ main {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-} */
+}
+/* main-newsstand 에서 
+가로 가운데 정렬은 부모가 text-align: center 로 하고
+세로 가운데 정렬은 자식이 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); 을 쓴다.*/
 
 #main-weather {
   display: inline-block;
@@ -327,17 +347,16 @@ main {
   width: 740px;
   height: 837px;
   background: white;
-  /* margin-bottom: 8px;
-  margin-right: 8px; */
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 #main-shopping {
-  display: inline-block;
-  /* float: left; */
+  float: left;
   width: 332px;
   height: 837px;
   background: white;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 #main-third-block,
@@ -347,13 +366,12 @@ main {
 }
 
 #main-event {
-  display: inline-block;
-  /* float: left; */
+  float: left;
   width: 740px;
   height: 130px;
   background: white;
   vertical-align: top;
-  /* margin-right: 8px; */
+  margin-right: 8px;
 }
 
 #main-third-ad {
