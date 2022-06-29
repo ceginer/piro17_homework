@@ -23,6 +23,7 @@ body {
 .center-align {
   margin: 0 auto;
   width: 1080px;
+  position: relative;
 }
 #header-search a {
   text-decoration: none;
@@ -75,7 +76,7 @@ body {
   padding: 0;
   background: #03cf5d;
   position: absolute;
-  right: 0;
+  right: -3px;
   top: -2px;
 }
 
@@ -92,10 +93,17 @@ body {
   transform: translateY(-50%); */
 }
 
+nav {
+  height: 40px;
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #f1f3f6;
+}
+
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 16px 0 0 4px;
   list-style: none;
+  display: inline-block;
 }
 
 nav li {
@@ -151,13 +159,32 @@ nav li:nth-child(6) span:first-child:first-child {
 
 #header-search {
   clear: both;
+  padding-top: 20px;
 }
 
-#header-top span:first-child {
+#header-top span {
   color: #888888;
-  letter-spacing: -3px;
-  font-size: 11px;
-  line-height: 22px;
+  letter-spacing: -1px;
+  font-size: 17px;
+  line-height: 40px;
+  padding: 10px;
+}
+
+header {
+  height: 170px;
+}
+
+#search-ranking {
+  position: absolute;
+  display: inline-block;
+  top: 9px;
+  right: 0;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
 }
 
 /* nav li:first-child span:first-child {
