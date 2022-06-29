@@ -1,5 +1,10 @@
 /* 선택자(selector) */
 
+* {
+  /* 보더박스로 지정해 padding content border 다 합침  */
+  box-sizing: border-box;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -24,6 +29,7 @@
   /* background-image: url(./sp_search.png);
   background-position: -4px -10px; */
   background: url(./sp_search.png) -4px -10px no-repeat;
+  vertical-align: middle;
 }
 
 #header-search h1 span {
@@ -36,7 +42,16 @@
   padding: 12px 0 12px 10px;
   width: 520px;
   display: inline-block;
-  border: 2px solid #03cf5d;
+  border: 2px solid #03cf5d; /* hex */
+  box-sizing: border-box;
+}
+
+#header-search fieldset input {
+  /* input창은 별도 지정없이 css적용되어 있어서 삭제하려는 의도 */
+  border: none;
+  padding: 0;
+  outline: none;
+  vertical-align: middle;
 }
 /* #header-center h1 {
     자손 선택자
