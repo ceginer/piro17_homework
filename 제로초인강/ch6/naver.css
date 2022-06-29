@@ -223,6 +223,9 @@ main {
 #main-first-block {
   display: inline-block;
   width: 100%;
+  /* 밑의 2개가 float으로 인해 둥둥떠다녀서
+  부모태그가 block하지 못하므로 display: inline-block으로
+  block할 수 있게 만들었다 - block format context */
 }
 
 #main-ad {
@@ -230,18 +233,18 @@ main {
   width: 740px;
   height: 120px;
   background: #555;
-  /* margin-right: 8px;
-  margin-bottom: 8px; */
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-login {
-  /* float: left; */
-  display: inline-block;
+  float: left;
+  /* display: inline-block; */
   width: 332px;
   height: 120px;
   vertical-align: top;
   background-color: white;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 /* #main-second-block .inline-block:first-child {
@@ -258,8 +261,8 @@ main {
   width: 740px;
   height: 46px;
   background-color: white;
-  /* margin-right: 8px;
-  margin-bottom: 8px; */
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 /* #main-ytn h3,
@@ -272,8 +275,8 @@ main {
   width: 740px;
   height: 246px;
   background-color: white;
-  /* margin-right: 8px;
-  margin-bottom: 8px; */
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 /* #main-newsstand h3 {
@@ -307,7 +310,7 @@ main {
   width: 332px;
   height: 142px;
   background-color: white;
-  /* margin-bottom: 8px; */
+  margin-bottom: 8px;
 }
 
 #main-second-ad {
