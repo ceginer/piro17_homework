@@ -20,7 +20,7 @@ body {
   overflow: hidden;
 }
 
-#header-center {
+.center-align {
   margin: 0 auto;
   width: 1080px;
 }
@@ -92,6 +92,28 @@ body {
   transform: translateY(-50%); */
 }
 
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li:first-child span:first-child {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-position: -420px -73px;
+  background-repeat: no-repeat;
+  vertical-align: top;
+  margin: 3px 9px 0 0;
+}
+
+nav li:nth-child(2) span:first-child {
+}
 /* #header-center h1 {
     자손 선택자
 } */
