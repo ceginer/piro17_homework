@@ -293,12 +293,9 @@ header {
   margin: 0;
   width: 332px;
   height: 334px;
-  /* border: 1px solid #aaa;
+  border: 1px solid #aaa;
   background: white;
-  position: absolute;
-  top: -15px;
-  right: 0;
-  z-index: 100; */
+  z-index: 100;
 }
 
 /* 
@@ -339,6 +336,7 @@ main {
   background-color: #f2f4f7;
   display: inline-block;
   width: 100%;
+  z-index: 1;
 }
 
 #main-centered {
