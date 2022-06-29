@@ -425,6 +425,16 @@ main {
 }
 
 #main-ytn h3,
+#main-newsstand h3 {
+  font-size: 14px;
+  font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo,
+    sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+}
+
+#main-ytn h3,
 #main-ytn ol {
   /* #main-ytn h3, ol 하면 전체 ol 이 되므로
    #main-ytn h3, #main-ytn ol 이렇게 적기*/
