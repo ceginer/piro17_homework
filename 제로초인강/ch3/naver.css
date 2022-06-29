@@ -13,18 +13,30 @@
   margin: 0 auto;
   width: 1080px;
 }
-
-#header-search > h1 {
-  width: 280px;
-  display: inline-block;
+#header-search a {
+  text-decoration: none;
 }
 
-#header-search h2 {
+#header-search h1 {
+  width: 198px;
+  height: 48px;
+  display: inline-block;
+  /* background-image: url(./sp_search.png);
+  background-position: -4px -10px; */
+  background: url(./sp_search.png) -4px -10px no-repeat;
+}
+
+#header-search h1 span {
+  display: none;
 }
 
 #header-search fieldset {
+  /* 순서대로 시계방향 위 오른쪽 아래 왼쪽 */
+  margin: 12px 0 12px 10px;
+  padding: 12px 0 12px 10px;
   width: 520px;
   display: inline-block;
+  border: 2px solid #03cf5d;
 }
 /* #header-center h1 {
     자손 선택자
