@@ -569,7 +569,7 @@ main {
   font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo,
     sans-serif;
 }
-/* 
+
 .opacity {
   opacity: 0.5;
   background: white;
@@ -596,7 +596,7 @@ main {
   color: #00b336;
   font-weight: 700;
   height: 45px;
-} */
+}
 
 #subject-all {
   border-right: 1px solid #ebeef3;
@@ -606,7 +606,7 @@ main {
 #subject-prev,
 #subject-next {
   position: relative;
-  width: 45px;
+  width: 36px;
   border: none;
   border-left: 1px solid #ebeef3;
   background: white;
