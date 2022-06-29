@@ -141,12 +141,23 @@ nav li:nth-child(6) span:first-child:first-child {
   background-position: -70px -285px;
 }
 
-.nav-naver {
+#header-top {
   /* text-align: right; 1번째 */
   /* 2번째 position: absolute;
   top: 0;
   right: 0; */
   float: right; /*3번째*/
+}
+
+#header-search {
+  clear: both;
+}
+
+#header-top span:first-child {
+  color: #888888;
+  letter-spacing: -3px;
+  font-size: 11px;
+  line-height: 22px;
 }
 
 /* nav li:first-child span:first-child {
