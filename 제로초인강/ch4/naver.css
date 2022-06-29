@@ -30,6 +30,8 @@
   background-position: -4px -10px; */
   background: url(./sp_search.png) -4px -4px no-repeat;
   vertical-align: middle;
+  position: relative;
+  top: -6px;
 }
 
 #header-search h1 span {
