@@ -136,7 +136,7 @@ nav li:nth-child(5) span:first-child {
   background-position: -279px -156px;
 }
 
-nav li:nth-child(6) span:first-child {
+nav li:nth-child(6) span:first-child:first-child {
   width: 25px;
   background-position: -70px -285px;
 }
