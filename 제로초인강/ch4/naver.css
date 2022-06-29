@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .blind {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -81,6 +87,9 @@
   height: 21px;
   display: inline-block;
   margin: 14px;
+  /* position: relative;
+  top: 50px;
+  transform: translateY(-50%); */
 }
 
 /* #header-center h1 {
