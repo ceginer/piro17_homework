@@ -24,4 +24,6 @@ while True:
     print('정수를 입력하세요')
     continue
 
-    
+num += a
+for i in range(1,num+1):
+  print('playerA :', i)
