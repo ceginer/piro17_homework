@@ -104,13 +104,33 @@ while True :
           average = (int(student_scorepart[0]) + int(student_scorepart[1])) / 2
           avg(average)
           student_scorepart.append(grade)
+        print('모든 학생의 학점이 등록되었습니다.')
           # print(student_scorepart)
           # print(student_dict)
 
-    # elif choice == "3" :
+    elif choice == "3" :
         #예외사항 처리(저장된 학생 정보의 유무, 저장되어 있는 학생들의 학점이 모두 부여되어 있는지)
         #예외사항이 아닌 경우 3번 함수 호출
+      if len(student_dict) == 0:
+        print('학생들의 데이터가 없어요!')
 
+# 0일 경우에는 밑의 부분은 실행되지 않아 else 쓸 필요 없음
+      else:
+        try:
+          for i in range(len(student_dict)):
+            student_scorepart = student_dict[student_list[i]]
+            if len(student_scorepart) == 2:
+              raise
+        except:
+          print('학점이 등록되지 않은 학생이 있습니다!')
+        else:
+          print()
+          print('-'*40)
+          print('name mid final grade'.replace(' ',' '*5))
+          print('-'*40)
+          for i in range(len(student_list)):
+            student_scorepart = student_dict[student_list[i]]
+            print(f'{student_list[i]} {student_scorepart[0]}  {student_scorepart[1]}   {student_scorepart[2]}'.replace(' ',' '*3))
     # elif choice == "4" :
         #예외사항 처리(저장된 학생 정보의 유무)
         #예외사항이 아닌 경우, 삭제할 학생 이름 입력 받기
