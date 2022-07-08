@@ -7,23 +7,32 @@ def StrtoInt(s):
   except:
     return False
 
+def TellNum():
+  while True:
+    global a
+    a = input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :')
 
-
-while True:
-  a = input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :')
-
-  if StrtoInt(a):
-    a = int(a)
-    if a != 1 and a!= 2 and a!=3:
-      print('1,2,3 중 하나를 입력하세요')
-      continue
+    if StrtoInt(a):
+      a = int(a)
+      if a != 1 and a!= 2 and a!=3:
+        print('1,2,3 중 하나를 입력하세요')
+        continue
+      else:
+        break
+        
     else:
-      break
-      
-  else:
-    print('정수를 입력하세요')
-    continue
+      print('정수를 입력하세요')
+      continue
 
+TellNum()
 num += a
-for i in range(1,num+1):
+
+for i in range(num-a+1,num+1):
   print('playerA :', i)
+
+TellNum()
+num += a
+
+for i in range(num-a+1,num+1):
+  print('playerB :', i)
+
