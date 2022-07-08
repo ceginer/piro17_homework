@@ -23,6 +23,9 @@ from pickle import APPEND
     #학생 정보 삭제하는 코딩
 
 #학생 정보를 저장할 변수 초기화
+student_dict={}
+student_sublist =[]
+
 print("*Menu*******************************")
 print("1. Inserting students Info(name score1 score2)")
 print("2. Grading")
@@ -43,9 +46,6 @@ while True :
           return True
         except:
           return False
-      
-      student_dict={}
-      student_sublist =[]
 
       while True:
         try:
@@ -72,16 +72,40 @@ while True :
         except ValueError:
           print('Num of data is not 3!')
 
-
-      # length != 3 , insert_name in student_dict,  insert_mid and insert_fin > 0,int
-
+      # print(student_dict)
 
 
 
-    # elif choice == "2" :
+
+    elif choice == "2" :
         #예외사항 처리(저장된 학생 정보의 유무)
         #예외사항이 아닌 경우 2번 함수 호출
         #"Grading to all students." 출력
+      def avg(x):
+        global grade
+        if x >= 90:
+          grade = 'A'
+        elif 80 <= x < 90:
+          grade = 'B'
+        elif 70 <= x < 80:
+          grade = 'C'
+        else:
+          grade = 'D'
+
+      student_list = list(student_dict.keys())
+      grade ='A'
+
+      if len(student_dict) == 0:
+        print('학생들의 데이터가 없어요!')
+
+      else:
+        for i in range(len(student_dict)):
+          student_scorepart = student_dict[student_list[i]]
+          average = (int(student_scorepart[0]) + int(student_scorepart[1])) / 2
+          avg(average)
+          student_scorepart.append(grade)
+          # print(student_scorepart)
+          # print(student_dict)
 
     # elif choice == "3" :
         #예외사항 처리(저장된 학생 정보의 유무, 저장되어 있는 학생들의 학점이 모두 부여되어 있는지)
