@@ -22,28 +22,33 @@ def brGame():
       print('정수를 입력하세요')
       continue
 
-
-
+from random import randint
 
 num = 0
 winner = 0
+# membernum 0 = player, 1 = omputer 승리
 membernum=2
-member = {1:'A', 0:'B'}
+member = {1:'computer', 0:'player'}
 
 try:
   while (True):
-    brGame()
-    num += a
     membernum += 1
+    membernum %= 2
+
+    if membernum == 0:
+      brGame()
+    if membernum == 1:
+      a=randint(1,3)
+    
+    num += a
 
     for i in range(num-a+1,num+1):
-      membernum %= 2
-      print(f'player {member[membernum]} :', i)
+      print(f'{member[membernum]}', i)
       if i == 31:
         raise
-      
+
 except:
-  if membernum==1:
-    print('player A win!')
-  elif membernum==2:
-    print('player B win!')
+  if membernum==0:
+    print('computer win!')
+  elif membernum==1:
+    print('player win!')
