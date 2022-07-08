@@ -27,6 +27,7 @@ def TellNum():
       print('정수를 입력하세요')
       continue
 
+winner = 0
 try:
   while (True):
     TellNum()
@@ -35,6 +36,7 @@ try:
     for i in range(num-a+1,num+1):
       print('playerA :', i)
       if i == 31:
+        winner=1
         raise
 
     TellNum()
@@ -43,6 +45,10 @@ try:
     for i in range(num-a+1,num+1):
       print('playerB :', i)
       if i == 31:
+        winner=2
         raise
 except:
-  print('종료')
+  if winner==1:
+    print('playerA win!')
+  else:
+    print('playerB win!')
