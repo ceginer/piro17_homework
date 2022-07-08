@@ -1,3 +1,6 @@
+from ast import While
+
+
 num = 0
 
 def StrtoInt(s):
@@ -24,15 +27,22 @@ def TellNum():
       print('정수를 입력하세요')
       continue
 
-TellNum()
-num += a
+try:
+  while (True):
+    TellNum()
+    num += a
 
-for i in range(num-a+1,num+1):
-  print('playerA :', i)
+    for i in range(num-a+1,num+1):
+      print('playerA :', i)
+      if i == 31:
+        raise
 
-TellNum()
-num += a
+    TellNum()
+    num += a
 
-for i in range(num-a+1,num+1):
-  print('playerB :', i)
-
+    for i in range(num-a+1,num+1):
+      print('playerB :', i)
+      if i == 31:
+        raise
+except:
+  print('종료')
