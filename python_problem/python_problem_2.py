@@ -25,7 +25,7 @@ from pickle import APPEND
 #학생 정보를 저장할 변수 초기화
 student_dict={}
 student_sublist =[]
-
+student_list = []
 print("*Menu*******************************")
 print("1. Inserting students Info(name score1 score2)")
 print("2. Grading")
@@ -50,7 +50,7 @@ while True :
       while True:
         try:
           student_sublist.clear()
-          insert_name, insert_mid, insert_fin = input('Enter name mid-score final-score').split()
+          insert_name, insert_mid, insert_fin = input('Enter name mid-score final-score : ').split()
           student_sublist.extend([insert_name, insert_mid, insert_fin])
 
           if not(StrtoInt(insert_mid)) or not(StrtoInt(insert_fin)):
@@ -117,26 +117,37 @@ while True :
 # 0일 경우에는 밑의 부분은 실행되지 않아 else 쓸 필요 없음
       else:
         try:
+          # print(student_list)
           for i in range(len(student_dict)):
             student_scorepart = student_dict[student_list[i]]
             if len(student_scorepart) == 2:
-              raise
-        except:
+              raise ValueError
+        except ValueError:
           print('학점이 등록되지 않은 학생이 있습니다!')
         else:
           print()
           print('-'*40)
           print('name mid final grade'.replace(' ',' '*5))
           print('-'*40)
-          for i in range(len(student_list)):
+          for i in range(len(student_dict)):
             student_scorepart = student_dict[student_list[i]]
             print(f'{student_list[i]} {student_scorepart[0]}  {student_scorepart[1]}   {student_scorepart[2]}'.replace(' ',' '*3))
-    # elif choice == "4" :
+    elif choice == "4" :
         #예외사항 처리(저장된 학생 정보의 유무)
         #예외사항이 아닌 경우, 삭제할 학생 이름 입력 받기
         #입력 받은 학생의 존재 유무 체크 후, 없으면 "Not exist name!" 출력
         #있으면(예를 들어 kim 이라 하면), 4번 함수 호출 후에 "kim student information is deleted." 출력
+      
+      student_delete = input('삭제할 이름을 적어주세요 : ')
+      # print(student_delete)
 
+      if student_delete in student_list:
+        del(student_dict[student_delete])
+        student_list.remove(student_delete)
+        print(f'{student_delete} 학생의 정보는 삭제되었습니다.')
+        # print(student_list)
+      else:
+        print('이름이 존재하지 않습니다!')
     # elif choice == "5" :
         #프로그램 종료 메세지 출력
         #반복문 종료
