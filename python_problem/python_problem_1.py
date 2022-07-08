@@ -1,8 +1,3 @@
-from ast import While
-
-
-num = 0
-
 def StrtoInt(s):
   try:
     int(s)
@@ -27,28 +22,26 @@ def TellNum():
       print('정수를 입력하세요')
       continue
 
+
+num = 0
 winner = 0
+membernum=2
+member = {1:'A', 0:'B'}
+
 try:
   while (True):
     TellNum()
     num += a
+    membernum += 1
 
     for i in range(num-a+1,num+1):
-      print('playerA :', i)
+      membernum %= 2
+      print(f'player {member[membernum]} :', i)
       if i == 31:
-        winner=1
         raise
-
-    TellNum()
-    num += a
-
-    for i in range(num-a+1,num+1):
-      print('playerB :', i)
-      if i == 31:
-        winner=2
-        raise
+      
 except:
-  if winner==1:
-    print('playerA win!')
-  else:
-    print('playerB win!')
+  if membernum==1:
+    print('player A win!')
+  elif membernum==2:
+    print('player B win!')
