@@ -5,7 +5,7 @@ def StrtoInt(s):
   except:
     return False
 
-def TellNum():
+def brGame():
   while True:
     global a
     a = input('부를 숫자의 개수를 입력하세요(1, 2, 3만 입력 가능) :')
@@ -23,6 +23,8 @@ def TellNum():
       continue
 
 
+
+
 num = 0
 winner = 0
 membernum=2
@@ -30,7 +32,7 @@ member = {1:'A', 0:'B'}
 
 try:
   while (True):
-    TellNum()
+    brGame()
     num += a
     membernum += 1
 
