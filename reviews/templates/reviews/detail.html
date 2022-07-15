@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <title>영화 상세정보</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="Home"><a href="/">My Movie reviews</a></div>
+      <div class="addreview"><a href="/create">Add a New review</a></div>
+    </div>
+    <div class="detail-article">
+      <div class="detail-head detail">
+        <h1><a href="">{{post.title}}</a></h1>
+        <div>
+          <span><a href="/edit/{{post.id}}">수정</a></span>
+          <form action="/delete/{{post.id}}" method="post" class="delete">
+            {% csrf_token %}
+            <span><button class="deletebtn">삭제</button></span>
+          </form>
+        </div>
+      </div>
+      <div class="midcontain">
+        <div>
+          <img
+            src="https://picsum.photos/id/{{post.id}}1/250/250"
+            class="detailimg"
+          />
+        </div>
+        <div class="detail-mid detail">
+          <p>개봉년도 : {{post.openyear}} 년</p>
+          <p>감독 : {{post.director}}</p>
+          <p>주연 : {{post.actor}}</p>
+          <p>장르 : {{post.genre}}</p>
+          <p>별점 : {{ post.star|floatformat }}</p>
+          <p>러닝타임 : {{post.runningtime}}</p>
+        </div>
+      </div>
+      <div class="detail-footer detail">{{post.moviereview}}</div>
+    </div>
+    <div class="container">
+      <h1>Hmm... How about that movie?</h1>
+
+      <div class="bird-container bird-container--one">
+        <div class="bird bird--one"></div>
+      </div>
+
+      <div class="bird-container bird-container--two">
+        <div class="bird bird--two"></div>
+      </div>
+
+      <div class="bird-container bird-container--three">
+        <div class="bird bird--three"></div>
+      </div>
+
+      <div class="bird-container bird-container--four">
+        <div class="bird bird--four"></div>
+      </div>
+    </div>
+  </body>
+</html>
