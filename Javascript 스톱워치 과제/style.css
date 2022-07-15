@@ -1,0 +1,96 @@
+@import "./reset.css";
+
+.container {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+  border: 1px solid black;
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  width: 70%;
+  text-align: center;
+  height: 70%;
+}
+
+.head {
+  font-size: 30px;
+  padding-top: 10vh;
+}
+
+.stopwatch {
+  height: 20vh;
+  margin: 20px auto;
+  width: 70%;
+  padding: 20px 0;
+  background-color: greenyellow;
+  border-radius: 15px;
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  height: 60px;
+  justify-content: center;
+  font-size: 40px;
+  margin: 15px auto;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+#start,
+#stop,
+#reset {
+  height: 5vh;
+}
+
+#log {
+  background-color: green;
+  border-start-end-radius: 20px;
+  border-top-left-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+}
+
+.watch-log {
+}
+
+#log h2 {
+  font-size: 20px;
+}
+
+#logplus {
+  height: 30vh;
+  overflow: auto;
+}
+
+.class-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 28px;
+  line-height: 28px;
+  background-color: lightcyan;
+}
+
+.class-mini {
+  width: 41.2px;
+  height: 28px;
+}
+
+.margin3 {
+  width: 5vh;
+}
