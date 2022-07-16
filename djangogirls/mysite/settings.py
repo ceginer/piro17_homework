@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-<<<<<<< HEAD
     
-=======
->>>>>>> c9f27e6787f9a383bef33965529f56e8f62e6d88
 ]
 
 MIDDLEWARE = [
@@ -108,11 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-<<<<<<< HEAD
-LANGUAGE_CODE = 'en-us'
-=======
 LANGUAGE_CODE = 'ko'
->>>>>>> c9f27e6787f9a383bef33965529f56e8f62e6d88
 
 TIME_ZONE = 'Asia/Seoul'
 
@@ -127,8 +120,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-<<<<<<< HEAD
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-=======
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
->>>>>>> c9f27e6787f9a383bef33965529f56e8f62e6d88
