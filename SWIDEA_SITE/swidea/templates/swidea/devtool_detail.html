@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>영화 상세정보</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="Home"><a href="/">My SW Idea Manage</a></div>
+      <div class="addreview"><a href="/idea_create">아이디어 등록</a></div>
+      <div class="addreview"><a href="/">아이디어 관리</a></div>
+      <div class="addreview"><a href="/devtool_create">개발툴 등록</a></div>
+      <div class="addreview"><a href="/devtool_list">개발툴 관리</a></div>
+    </div>
+    <div class="create-header">
+      <h2>Idea Detail</h2>
+      <p>
+        개발툴 세부내용 페이지 입니다. 당신이 구현할 줄 아는 개발툴을
+        살펴보세요!
+      </p>
+      <hr
+        style="width: 93vh; margin: 12px; background-color: gray; height: 2px"
+      />
+    </div>
+    <div class="detail-article">
+      <div class="midcontain">
+        <div class="detail-mid detail">
+          <h1>{{devtool.name}}</h1>
+          <p>{{devtool.kind}}</p>
+          <p>{{devtool.content}}</p>
+        </div>
+        <div>
+          <p>만들 수 있는 sw목록</p>
+        </div>
+      </div>
+      <div>
+        <span><a href="/devtool_update/{{devtool.id}}">수정</a></span>
+        <form
+          action="/devtool_delete/{{devtool.id}}"
+          method="post"
+          class="delete"
+        >
+          {% csrf_token %}
+          <span><button class="deletebtn">삭제</button></span>
+        </form>
+        <span><a href="/devtool_list">목록</a></span>
+      </div>
+    </div>
+  </body>
+</html>

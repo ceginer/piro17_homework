@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>swidea site</title>
+  </head>
+  <body id="home">
+    <div class="header">
+      <div class="Home"><a href="/">My SW Idea Manage</a></div>
+      <div class="addreview"><a href="/idea_create">아이디어 등록</a></div>
+      <div class="addreview"><a href="/">아이디어 관리</a></div>
+      <div class="addreview"><a href="/devtool_create">개발툴 등록</a></div>
+      <div class="addreview"><a href="/devtool_list">개발툴 관리</a></div>
+    </div>
+    <div id="allcontain">
+      <div class="create-header">
+        <h2>Devtool list</h2>
+        <p>개발툴 관리페이지 입니다. 당신의 개발툴을 잊지 말고 기록하세요!</p>
+        <hr
+          style="width: 93vh; margin: 12px; background-color: gray; height: 2px"
+        />
+      </div>
+      <div class="article">
+        {% for devtool in devtools %}
+        <div class="content">
+          <div class="content-h">
+            <a href="/devtool_detail/{{devtool.id}}"> {{devtool.name}}</a>
+          </div>
+          <div>{{devtool.kind}}</div>
+          <div>{{devtool.content}}</div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

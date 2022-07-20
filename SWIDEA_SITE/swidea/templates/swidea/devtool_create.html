@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <title>개발툴 등록 페이지</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="Home"><a href="/">My SW Idea Manage</a></div>
+      <div class="addreview"><a href="/idea_create">아이디어 등록</a></div>
+      <div class="addreview"><a href="/">아이디어 관리</a></div>
+      <div class="addreview"><a href="/devtool_create">개발툴 등록</a></div>
+      <div class="addreview"><a href="/devtool_list">개발툴 관리</a></div>
+    </div>
+    <div class="create-article">
+      <div class="create-header">
+        <h2>Idea Register</h2>
+        <p>개발툴 등록페이지 입니다. 자신이 할 수 있는 개발툴을 등록하세요!</p>
+        <hr
+          style="width: 93vh; margin: 12px; background-color: gray; height: 2px"
+        />
+      </div>
+      <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %} {{ form.as_p }}
+        <div class="create-save">
+          <input type="submit" value="Save" style="font-size: 23px" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
