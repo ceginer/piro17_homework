@@ -40,11 +40,10 @@
         <div class="detail-mid detail">
           <h1>{{post.title}}</h1>
           <p>아이디어 관심도 : {{post.interest}}</p>
-          <p>
-            <a href="/devtool_detail/{{post.id}}"
-              >예상 개발 툴 : {{post.devtool}}</a
-            >
-          </p>
+          <div>
+            <span class="property">예상 개발 툴 : </span>
+            <a href="/tool/detail/{{tool_id}}"> {{post.devtool}}</a>
+          </div>
           <p>아이디어 설명 : {{post.content}}</p>
         </div>
       </div>

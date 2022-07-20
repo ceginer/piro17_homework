@@ -77,6 +77,18 @@ def devtool_detail(request, id):
     'devtool' : devtool
   }
   return render (request, template_name="swidea/devtool_detail.html", context=context)
+
+def detail(request, id):
+    idea = Post.objects.get(id=id)
+    tools = Devtool.objects.all()
+    for tool in tools:
+      if tool.name == idea.devtool:
+        tool_id = tool.id
+    context = {
+      "idea":idea,
+      "tool_id":tool_id
+    }
+    return render(request, template_name="swidea/devtool_detail.html",context=context)
   
 
 def devtool_update(request, id):
