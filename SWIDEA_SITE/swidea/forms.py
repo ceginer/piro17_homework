@@ -21,7 +21,7 @@ class PostForm(forms.ModelForm):
             new_choices.append(temp)
         new_choices = tuple(new_choices)
         
-        self.fields['tool_choice'] = forms.ChoiceField(choices=new_choices, label="예상 개발 툴")
+        self.fields['devtool'] = forms.ChoiceField(choices=new_choices, label="예상 개발 툴")
     class Meta:
         model = Post
         fields = ('title', 'image','content', 'interest','devtool',)
