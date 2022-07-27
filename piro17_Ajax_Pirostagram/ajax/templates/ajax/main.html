@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/f578b19b63.js" crossorigin="anonymous" ></script>
+    <title>piroinstagram</title>
+  </head>
+  <body>
+    <div class="postcontain">
+      {% for post in posts %}
+      <div id="post-id-{{post.id}}">
+        <h1>
+          {{post.title}}
+        </h1>
+        <img src="https://picsum.photos/id/{{post.id}}1/250/250" alt="">
+        <p>{{post.content}}</p>
+        <div class="commentlist">
+          <form style="display: inline-block;" action="/" method="POST" class="post-form">
+            {% csrf_token %}
+            <div class="comments">
+              {{ form.as_p }}
+              <input type="submit" value="Save"/>
+            </div>
+          </form>
+          {% for comment in comments %}
+          <div id="comment-{{comment.id}}">
+            {{comment.text}}
+            <button type="submit" onclick="onClickDel({{comment.id}})">
+              {% csrf_token %} 삭제
+            </button>
+            <div class="likebox" style="display: inline-block;">
+              <button type="submit" onclick="onClickLike({{comment.id}}, 'like')" name="type">
+                {%csrf_token%} {% if comment.like %}
+                <i class="fas fa-heart"></i>
+                {%else%}
+                <i class="far fa-heart"></i>
+                {%endif%}
+              </button>
+            </div>
+          </div>
+          {% endfor%}
+        </div>
+          <!-- <div class="commentbox">
+            <input type="text" id="comment" size="40" name="comment" placeholder="댓글을 입력하세요"/>
+            <button type="submit" onclick="make_comment({{post.id}})">작성</button>
+          </div> -->
+      </div>
+      {% endfor %}
+    
+  </body>
+  <script>
+    const requestdel = new XMLHttpRequest();
+    
+    const onClickDel = (id) => {
+      const url = "/delete/";
+      requestdel.open("POST", url, true);
+      requestdel.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      );
+      requestdel.send(JSON.stringify({ id: id }));
+    };
+
+    requestdel.onreadystatechange = () => {
+      if (requestdel.readyState === XMLHttpRequest.DONE) {
+        if (requestdel.status < 400) {
+          const { id } = JSON.parse(requestdel.response);
+          const comment = document.querySelector(`#comment-${id}`);
+          comment.remove();
+        }
+      }
+    };
+
+
+    const requestLike = new XMLHttpRequest();
+    const onClickLike = (id) => {
+      const url = "/like/";
+      requestLike.open("POST", url, true);
+      requestLike.setRequestHeader(
+        "Content-Type",
+        "application/x-www-form-urlencoded"
+      );
+      requestLike.send(JSON.stringify({ id: id }));
+    };
+
+    requestLike.onreadystatechange = () => {
+      if (requestLike.readyState === XMLHttpRequest.DONE) {
+        const { id, type } = JSON.parse(requestLike.response); 
+        // const element = document.querySelector(`#post-${id} .contentbox`);
+        const i = document.querySelector(`#comment-${id} button i`);
+        i.classList.toggle("far");
+        i.classList.toggle("fas");
+      }
+    };
+
+
+
+    const request = new XMLHttpRequest(); //ajax의 시작
+    const make_comment = (post_id) => {
+      var inputValue = document.getElementById('comment').value;
+      const url = "comment/";
+      request.open("POST",url,true);
+      request.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+      request.send(JSON.stringify({ post_id : post_id, inputValue : inputValue })); // json 형태로 url로 보냈따
+    }
+
+    request.onreadystatechange = () =>{
+      if (request.readyState == XMLHttpRequest.DONE) {
+        if (request.status <= 400) {
+        const {post_id, inputValue} = JSON.parse(request.response);
+        const element = document.querySelector('#post-id-{{post.id}} #comment-{{comment.id}}')
+        comment=Comment()
+        comment.save()
+        }
+      }
+    };
+  </script>
+</html>
