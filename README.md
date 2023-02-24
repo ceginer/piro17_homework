@@ -20,3 +20,15 @@
 
 ### [7] my movie reviews 
 - 나만의 영화기록 사이트 제작 (django 활용)
+
+### [8] ERD cloud
+- facebook ERD 작성
+
+### [9] swidea_site
+- 
+
+### [10] CardGame
+- git을 이용한 협업, django/html/css/js 활용
+
+### [11] Priostagram
+- ajax를 이용한 게시물 찜하기, 삭제, 댓글기능
