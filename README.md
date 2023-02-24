@@ -4,8 +4,7 @@
 - 제로초 인강 html/css 강의 수강
 
 ### [2] Arsha 클론코딩
-- Arsha 페이지 클론코딩
-[Arsha](https://bootstrapmade.com/demo/Arsha/) 페이지
+- [Arsha](https://bootstrapmade.com/demo/Arsha/) 페이지 클론코딩
 
 ### [3] 코딩도장 - python
 - 코딩도장 python 20강 수강
