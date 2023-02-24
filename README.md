@@ -25,7 +25,7 @@
 - facebook ERD 작성
 
 ### [9] swidea_site
-- 
+- django ORM 활용
 
 ### [10] CardGame
 - git을 이용한 협업, django/html/css/js 활용
