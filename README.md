@@ -31,4 +31,4 @@
 - git을 이용한 협업, django/html/css/js 활용
 
 ### [11] Priostagram
-- ajax를 이용한 게시물 찜하기, 삭제, 댓글기능
+- ajax를 이용한 댓글 작성, 좋아요, 삭제기능
