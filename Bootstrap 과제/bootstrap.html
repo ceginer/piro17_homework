@@ -69,9 +69,18 @@
       >
         <div class="row text-center">
           <div class="col" id="big">
-            <h1 class="featurette-heading fw-normal 1h-1">Pirogramming17</h1>
-            <p class="lead">cheer up</p>
-            <hr class="featurette-divider" style="width: 60rem" />
+            <h1 class="featurette-heading fw-bold 1h-1">Pirogramming18</h1>
+            <p class="lead" style="font-weight: 600;">cheer up</p>
+            <div id="size" style="display: flex; justify-content: center; width:100rem;">
+              <script>
+                var size = document.getElementById("size");
+                window.onresize = function(event){
+                var innerWidth = window.innerWidth;
+                size.style.width = innerWidth+'px';
+                }
+              </script>
+              <hr class="featurette-divider" style="width: 80%;" />
+            </div>
             <div>
               <a href="#intro" class="text-white"><button type="button" class="btn btn-primary">Get Started</button></a>
             </div>
@@ -107,7 +116,7 @@
         <div
           class="row justify-content-center text-center justify-content-around"
         >
-          <div class="col-md-4 col-sm-6 my-3">
+          <div class="col-md-4 col-sm-12 my-3">
             <div
               class="card justify-content-center align-items-center p-3 bg-secondary text-white border-line border border-secondary"
             >
@@ -129,7 +138,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 my-3">
+          <div class="col-md-4 col-sm-12 my-3">
             <div
               class="card justify-content-center align-items-center p-3 bg-secondary text-white border-line border border-secondary"
             >
@@ -155,7 +164,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 col-sm-6 my-3">
+          <div class="col-md-4 col-sm-12 my-3">
             <div
               class="card justify-content-center align-items-center p-3 bg-secondary text-white border-line border border-secondary"
             >
@@ -187,7 +196,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/1203/500"
               alt=""
             />
@@ -195,7 +204,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/1223/500"
               alt=""
             />
@@ -203,7 +212,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/1220/500"
               alt=""
             />
@@ -211,7 +220,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/3250/500"
               alt=""
             />
@@ -219,7 +228,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/1570/500"
               alt=""
             />
@@ -227,7 +236,7 @@
           <div class="col-md-4 col-sm-6 my-3">
             <img
               class="w-75"
-              style="height: 13rem"
+              style="height: 13rem; object-fit: cover;"
               src="https://picsum.photos/1200/500"
               alt=""
             />
@@ -330,13 +339,13 @@
         <div class="modal-content bg-secondary">
           <div class="modal-header justify-content-center align-items-center">
             <div>
-              <h5 class="modal-title text-white text-center fw-bold" id="exampleModalLabel">피로그래밍 17기</h5>
+              <h5 class="modal-title text-white text-center fw-bold" id="exampleModalLabel">피로그래밍 18기</h5>
             </div>
           </div>
-          <div class="modal-body text-center text-white fw-bold">
+          <div class="d-flex flex-column modal-body text-center text-white fw-bold" style="padding: 2rem;">
             <h3 class="fw-bold">파이팅!</h3>
-            <p>모두들 아르샤 하느라 수고많았고 좀만 더 하자잇!</p>
-
+            <span>모두들 아르샤 하느라 수고많으셨습니다! </span>
+            <span>힘들더라도 계속해서 달려봐요!</span>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary bg-secondary border border-secondary text-primary" data-bs-dismiss="modal">Download</button>
